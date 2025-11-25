@@ -1,1 +1,1 @@
-![Bug Report](report/report.gif)
+![Bug](./reports/report.gif)
