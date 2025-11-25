@@ -11,9 +11,12 @@ import {
   standalone: false,
 })
 export class Tab1Page {
+  public times = 0;
+
   constructor(private inAppBrowser: InAppBrowser) {}
 
   test() {
+    this.times++;
     this.inAppBrowser.create('https://google.com', '_system');
   }
 }
