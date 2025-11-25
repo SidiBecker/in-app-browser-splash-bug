@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import {
+  InAppBrowser,
+  InAppBrowserOptions,
+} from '@awesome-cordova-plugins/in-app-browser/ngx';
 
 @Component({
   selector: 'app-tab1',
@@ -7,7 +11,9 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class Tab1Page {
+  constructor(private inAppBrowser: InAppBrowser) {}
 
-  constructor() {}
-
+  test() {
+    this.inAppBrowser.create('https://google.com', '_system');
+  }
 }
